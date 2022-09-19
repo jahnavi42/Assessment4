@@ -5,9 +5,35 @@ import images from '../../constants/images';
 import './Navbar.css';
 
 const Navbar = () => (
-  <nav className="app_navBar">
-    <div></div>
-    
+  <nav className="app__navbar">
+    <div className="app__navbar-logo">
+    <img src={images.gericht} alt="app logo"/>
+    </div>
+    <ul className="app__navbar-links">
+      <li className="p__opensans"><a href="#home">Home</a></li>
+      <li className="p__opensans"><a href="#Foodmenu">FoodMenu</a></li>
+      <li className="p__opensans"><a href="#cart">Cart</a></li>
+      <li className="p__opensans"><a href="#Feedback">Feedback</a></li>
+      <li className="p__opensans"><a href="#picklemenu">PickleMenu</a></li>
+    </ul>
+    <div className="app__navbar-login">
+      <a href="#login" className="p__opensans">Log In / Register</a>
+    </div>
+    <a href="/" className="p__opensans">Order</a>
+    <div className="app__navbar-smallscreen">
+      <GiHamburgerMenu color="#fff" fontSize={27} onClick={()=>{}}/>
+      <div className='app__navbar-smallscreen-overlay flex__center slide-bottom'>
+        <MdOutlineRestaurantMenu fontSize={27} className="overlay__close" onClick={()=>{}}/>
+      
+      <ul className="app__navbar-smallscreen-links">
+      <li className="p__opensans"><a href="#home">Home</a></li>
+      <li className="p__opensans"><a href="#Foodmenu">FoodMenu</a></li>
+      <li className="p__opensans"><a href="#cart">Cart</a></li>
+      <li className="p__opensans"><a href="#Feedback">Feedback</a></li>
+      <li className="p__opensans"><a href="#picklemenu">PickleMenu</a></li>
+    </ul>
+    </div>
+    </div>
   </nav>
 );
 
